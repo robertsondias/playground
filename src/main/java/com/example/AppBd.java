@@ -42,7 +42,7 @@ public class AppBd {
         } catch (SQLException e) {
             System.err.println("Nâo foi possível conectar ao banco dados" + e.getMessage());            
         }        
-        
+
     }        
     
     private void carregarDriveJDBC() {
@@ -51,5 +51,5 @@ public class AppBd {
         } catch (ClassNotFoundException e) {
             System.err.println("Nao foi possível carregar a biblioteca(classe) para acesso ao banco de dados" + e.getMessage());
         }
-    }
+    }    
 }
