@@ -40,11 +40,10 @@ public class AppBd {
             //var dao = new DAO(conn);
             //dao.listar("produto");
         } catch (SQLException e) {
-            System.err.println("Nâo foi possível conectar ao banco dados" + e.getMessage());
-            
+            System.err.println("Nâo foi possível conectar ao banco dados" + e.getMessage());            
         }        
+        
     }        
-
     
     private void carregarDriveJDBC() {
         try {
