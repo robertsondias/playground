@@ -1,0 +1,13 @@
+# https://www.gitpod.io/guides/gitpodify#postgresql
+
+image: 
+  file: .gitpod.Dockerfile
+vscode:
+  extensions:
+    - cweijan.vscode-mysql-client2
+    - vscjava.vscode-java-pack
+    - redhat.java
+    - vscjava.vscode-java-debug
+    - vscjava.vscode-java-dependency
+    - vscjava.vscode-java-test
+    - vscjava.vscode-maven
