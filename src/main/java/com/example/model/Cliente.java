@@ -13,8 +13,7 @@ public class Cliente {
         System.out.println("Criando sem parâmetro");
         double aleatorio = Math.random();
         if(aleatorio > 0.5)
-            especial = true;
-            
+            especial = true;            
     }
 
     public Cliente(double renda, char sexo){
