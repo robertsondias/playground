@@ -1,9 +1,8 @@
-package com.example.model;
+package com.example;
 
 public class Marca {
     private Long id;
     private String nome;
-
     
     public Long getId() {
         return id;
