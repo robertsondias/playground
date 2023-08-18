@@ -3,6 +3,8 @@ package com.example.DAO;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import com.example.model.Estado;
+
 public class EstadoDAO {
     private Connection conn;
 
@@ -38,4 +40,32 @@ public class EstadoDAO {
            System.err.println("Erro ao executar consulta SQL" + e.getMessage());
         }
     }
+
+    public void alterar(Estado estado) {
+        var sql = "update estado set nome = ?, uf = ?, regiao_id = ?, area_km2 = ?, populacao = ? where id = ?";
+        try (var statement = conn.prepareStatement(sql)) {
+            statement.setString(1, estado.getNome());
+            statement.setString(2, estado.getUf());
+            statement.setLong(3, estado.getRegiao().getId());
+            statement.setInt(4, estado.getAreakm2());
+            statement.setInt(5, estado.getPopulacao());
+            statement.setLong(6, estado.getId());
+            statement.executeUpdate();          
+        } catch (SQLException e) {
+            System.out.println("Não é possivel alterar o banco de dados." + e.getMessage());
+        }
+    }
+
+    public void excluir(long id) {
+        var sql = "delete from estado where id = ?";
+            try {
+                var statement = conn.prepareStatement(sql);
+                statement.setLong(1, id);
+                statement.executeUpdate();
+            } catch (SQLException e) {
+                System.err.println("Não foi possível excluir no banco de dados: " + e.getMessage());
+            }
+    }
+
+    
 }

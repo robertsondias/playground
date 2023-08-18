@@ -5,6 +5,8 @@ public class Estado {
     private String nome;
     private String uf;
     private RegiaoGeografica regiao;
+    private int areakm2;
+    private int populacao;
     
     public Long getId() {
         return id;
@@ -42,10 +44,4 @@ public class Estado {
     public void setPopulacao(int populacao) {
         this.populacao = populacao;
     }
-    private int areakm2;
-    private int populacao;
-
-    
-
-
 }
