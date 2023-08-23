@@ -13,8 +13,8 @@ public class Cidadao {
         this.dataNascimento = dataNascimento;
     }
 
-    public int idade() {
-        return LocalDate.now().getYear() - dataNascimento.getYear();       
+    public int idade(){
+        return LocalDate.now().getYear() - dataNascimento.getYear();
     }
 
     public String eleitor(){
@@ -22,11 +22,10 @@ public class Cidadao {
         if (idade < 16)
             return "Não é eleitor";
 
-        if (idade >15 && idade < 18 || idade > 70)
+        else if (idade > 15 && idade < 18 || idade > 70)
             return "Eleitor facultativo";
 
         return "Eleitor obrigatório";
-        
-        
+
     }
 }

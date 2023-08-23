@@ -3,6 +3,7 @@ package com.example.model;
 
 public class Cliente {
     private String cpf;
+    private int anoNascimento;
     private String nome;
     private String cidade;
     private double renda;
@@ -10,7 +11,7 @@ public class Cliente {
     private boolean especial;
     
     public Cliente(){
-        System.out.println("Criando sem parâmetro");
+        //System.out.println("Criando sem parâmetro");
         double aleatorio = Math.random();
         if(aleatorio > 0.5)
             especial = true;            
@@ -18,7 +19,7 @@ public class Cliente {
 
     public Cliente(double renda, char sexo){
         this();
-        System.out.println("Criando com parâmetro");
+        //System.out.println("Criando com parâmetro");
         setRenda(renda);
         this.sexo = sexo;
     }
@@ -73,8 +74,6 @@ public class Cliente {
     public void setAnoNascimento(int anoNascimento) {
         this.anoNascimento = anoNascimento;
     }
-
-    private int anoNascimento;
 
     public double getRenda(){
         return renda;

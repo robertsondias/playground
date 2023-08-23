@@ -25,7 +25,6 @@ public class AppArraysComFor {
                 
             }
             System.out.println();
-            
         }
     }
 }

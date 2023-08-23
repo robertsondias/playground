@@ -13,7 +13,7 @@ public class AppClasses {
         cliente.setCpf("99999999999");
         cliente.setCidade("Palmas");
 
-        String[] vetornome = cliente.getNome().split(" ");
+        var vetornome = cliente.getNome().split(" ");
         System.out.println(vetornome[0]);
         System.out.println(vetornome[1]);
 
