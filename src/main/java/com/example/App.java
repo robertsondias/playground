@@ -12,7 +12,6 @@ public class App {
     public static void main(String[] args) {
         new App();
     }
-
     
     public App(){
         try(var conn = getConnection()){
