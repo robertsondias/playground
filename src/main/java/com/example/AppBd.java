@@ -38,7 +38,6 @@ public class AppBd {
 
             inserirEstado(conn, estado);
             
-
             
             var estadoDAO = new EstadoDAO(conn);
             //estadoDAO.excluir(26L);

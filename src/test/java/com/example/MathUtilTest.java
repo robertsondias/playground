@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class MathUtilTest {
     @Test
     void testMdcP1BImpar() {
-        int a = 6, b = 3;
+        int a = 18, b = 3;
         int esperado = 3;
         int obtido = MathUtil.mdc(a, b);
 
